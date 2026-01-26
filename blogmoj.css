@@ -1,0 +1,487 @@
+/* ==================================================
+   1. GLOBAL BASE
+   ================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==================================================
+   2. HEADER
+   ================================================== */
+
+header {
+    font-family: 'EB Garamond', serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 40px auto;
+    width: 98%;
+    padding: 8px 0;
+}
+
+
+/* ==================================================
+   3. NAVIGATION BAR
+   ================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between header and nav links */
+}
+.nav-left h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Caveat', cursive;
+}
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 0;
+    margin-left: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-links a:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+}
+
+/* Social icons */
+.social-icons {
+
+    display: flex;
+    gap: 8px;
+}
+
+.social-icons svg {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.social-icons a:hover svg,
+.social-icons a:focus svg {
+    fill: rgb(105, 132, 223);
+    transform: translateY(-1px);
+}
+
+.social-icons a:focus {
+    outline: 2px solid rgb(105, 132, 223);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Dark mode toggle */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.theme-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+}
+
+/* ==================================================
+   4. FRONT PAGE – FEATURED LAYOUT
+   ================================================== */
+.side{
+    margin-left: 60px;
+    font-size: 24px;
+}
+.full-line {
+    border: none;                     /* remove default style */
+    border-bottom: 2px solid #000;    /* line */
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.featured-layout {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Featured article */
+.featured-post img {
+    width: 100%;       /* fill the container horizontally */
+    height: auto;      /* scale height automatically */
+    max-height: 500px; /* optional, prevents hero from being too tall */
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+    
+    
+    
+}
+
+.featured-post a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: block;
+}
+
+.featured-text {
+    margin-top: 15px;
+    position: absolute;
+    top: 30px;          /* move up/down */
+    left: 20px;            /* move left/right */
+    
+    padding: 2px 2px;
+    max-width: 70%;
+    color: black;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.featured-post a:hover .featured-text {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+
+.featured-text .tag {
+    font-size: 0.75rem;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.featured-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.featured-text .subtitle {
+  font-size: 16px;
+}
+
+.featured-text .date {
+  font-size: 16px;
+}
+
+
+.featured-text h2,
+.featured-text .subtitle,
+.featured-text .date {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 8px;
+  margin: 0 0 6px 0;
+  background: rgba(255, 255, 255,1);
+  border-radius: 14px;
+}
+
+
+/* Side articles */
+.side-post {
+    display: unset;
+    flex-direction: column;
+    height: 100%;
+    
+}
+.side-post:first-child img {
+    height: max-content;
+    object-fit: cover;
+}
+.side-post:last-child img {
+    margin-top: 45px;
+}
+
+.side-post img {
+    width: 100%;
+    height: auto;
+    max-height: 215px; /* optional */
+    object-fit: cover;
+    border-radius: 22px;
+
+}
+
+.side-post h3 {
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.side-post a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==================================================
+   5. ARTICLE PAGE
+   ================================================== */
+
+.single-post {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.single-post .post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.single-post p {
+    line-height: 1.7;
+}
+
+/* ==================================================
+   6. CONTACT SECTION
+   ================================================== */
+
+.contact-section {
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-links span {
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+/* ==================================================
+   7. FOOTER
+   ================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==================================================
+   8. DARK MODE
+   ================================================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #0c0b3e;
+}
+
+body.dark-mode .navbar {
+    background-color: #111;
+}
+
+body.dark-mode .divider {
+    background-color: #777;
+}
+
+body.dark-mode .social-icons svg {
+    fill: #bbb;
+}
+
+body.dark-mode .theme-btn {
+    color: #ffd369;
+}
+
+body.dark-mode img {
+    filter: brightness(0.9);
+}
+
+body.dark-mode .post-card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .read-more {
+    color: #bbb;
+}
+
+body.dark-mode .read-more:hover,
+body.dark-mode .read-more:focus {
+    color: rgb(105, 132, 223);
+}
+
+body.dark-mode .post-content .date {
+    color: #999;
+}
+
+/* ==================================================
+   9. BLOG LIST PAGE
+   ================================================== */
+
+.blog-list {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-card .post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.post-content .date {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover,
+.read-more:focus {
+    color: rgb(105, 132, 223);
+    outline: none;
+}
+
+/* ==================================================
+   10. RESPONSIVE
+   ================================================== */
+
+@media (max-width: 900px) {
+    .featured-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-post img {
+        height: 550px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-left {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-left h1 {
+        font-size: 28px;
+    }
+
+    .side {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .full-line {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .featured-text {
+        top: 15px;
+        left: 15px;
+        max-width: 85%;
+    }
+
+    .featured-text h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,164 @@
+/* ==================================================
+   INDEX PAGE SPECIFIC STYLES
+   ================================================== */
+
+/* Post Dump Heading */
+.side {
+    margin-left: 60px;
+    font-size: 24px;
+}
+
+.full-line {
+    border: none;
+    border-bottom: 2px solid #000;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+/* Featured Layout */
+.featured-layout {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Featured Article */
+.featured-post img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+}
+
+.featured-post a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: block;
+}
+
+.featured-text {
+    margin-top: 15px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 2px 2px;
+    max-width: 70%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.featured-post a:hover .featured-text {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+.featured-text .tag {
+    font-size: 0.75rem;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.featured-text h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.featured-text .subtitle {
+    font-size: 16px;
+}
+
+.featured-text .date {
+    font-size: 16px;
+}
+
+.featured-text h2,
+.featured-text .subtitle,
+.featured-text .date {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 8px;
+    margin: 0 0 6px 0;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 14px;
+}
+
+/* Side Articles */
+.side-post {
+    display: unset;
+    flex-direction: column;
+    height: 100%;
+}
+
+.side-post:first-child img {
+    height: max-content;
+    object-fit: cover;
+}
+
+.side-post:last-child img {
+    margin-top: 45px;
+}
+
+.side-post img {
+    width: 100%;
+    height: auto;
+    max-height: 215px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.side-post h3 {
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.side-post a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==================================================
+   RESPONSIVE (Index Page)
+   ================================================== */
+
+@media (max-width: 900px) {
+    .featured-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-post img {
+        height: 550px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .side {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .full-line {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .featured-text {
+        top: 15px;
+        left: 15px;
+        max-width: 85%;
+    }
+
+    .featured-text h2 {
+        font-size: 22px;
+    }
+}
