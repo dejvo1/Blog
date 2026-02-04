@@ -102,6 +102,10 @@ nav a:focus {
     line-height: 1.7;
     margin-bottom: 20px;
 }
+.image-row {
+    display: flex;
+    gap: 20px; /* space between images */
+}
 
 /* ==================================================
    DARK MODE (Post Page)
@@ -150,3 +154,4 @@ body.dark-mode .single-post .date {
         font-size: 1.25rem;
     }
 }
+
