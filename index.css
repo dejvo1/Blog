@@ -28,7 +28,7 @@
 /* Row 2: Iceland = exactly 1/2 width */
 .featured-layout--half {
     grid-template-columns: 1fr 1fr; /* 50% + 50% */
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .featured-layout--half .featured-post {
     grid-column: 1; /* only first half */
