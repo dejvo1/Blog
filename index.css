@@ -91,13 +91,17 @@
     border-radius: 14px;
 }
 /*after */
-.featured-post-after img {
-    width: 90%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 22px;
-    display: block;
+.featured-post-after .featured-text {
+    top: 20px;
+    left: 15px;
+    max-width: 85%;
+}
+.featured-post-after .featured-text h2 {
+    font-size: 20px;
+}
+.featured-post-after .featured-text .subtitle,
+.featured-post-after .featured-text .date {
+    font-size: 14px;
 }
 
 /* Side Articles */
