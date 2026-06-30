@@ -18,7 +18,7 @@
 /* Featured Layout */
 .featured-layout {
     max-width: 1400px;
-    margin: 60px auto;
+    margin: 60px auto 20px;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -28,10 +28,13 @@
 /* Row 2: Iceland = exactly 1/2 width */
 .featured-layout--half {
     grid-template-columns: 1fr 1fr; /* 50% + 50% */
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .featured-layout--half .featured-post {
     grid-column: 1; /* only first half */
+}
+.featured-layout--half .featured-text {
+    max-width: 85%;
 }
 /* Reuse same featured card styles for both rows */
 .featured-post img {
