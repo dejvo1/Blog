@@ -30,9 +30,6 @@
     grid-template-columns: 1fr 1fr; /* 50% + 50% */
     margin-top: 10px;
 }
-.featured-layout--half .featured-post {
-    grid-column: 1; /* only first half */
-}
 .featured-layout--half .featured-text {
     max-width: 85%;
 }
@@ -77,12 +74,11 @@
 @media (max-width: 900px) {
     .featured-layout,
     .featured-layout--half {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
-    .featured-layout--half .featured-text {
-    max-width: 85%;
+    .featured-layout--half .featured-post {
+        grid-column: auto;
     }
-
 }
 
 /* Side Articles */
