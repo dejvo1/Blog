@@ -77,11 +77,12 @@
 @media (max-width: 900px) {
     .featured-layout,
     .featured-layout--half {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
-    .featured-layout--half .featured-post {
-        grid-column: auto;
+    .featured-layout--half .featured-text {
+    max-width: 85%;
     }
+
 }
 
 /* Side Articles */
